@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="princeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>PRINCE</title>
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+
+  </head>
+  <body ng-controller="SubmissionController as submission">
+    <h1>Loaded</h1>
+    <input type="text" ng-model="submission.song" />
+    <button ng-click="submission.sendSong()">Send Song</button>
+
+    <input type="checkbox" ng-model="submission.showBuscemi" />
+
+    <div ng-show="submission.showBuscemi">
+      <img src="http://www.thefamouspeople.com/profiles/images/steve-buscemi-3.jpg" />
+    </div>
+
+  </body>
+</html>
